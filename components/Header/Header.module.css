@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+  height: 32px;
+  box-shadow: inset 0 -1px 0 0 var(--accents-2);
+  transform: translateZ(0);
+  -webkit-backdrop-filter: saturate(180%) blur(5px);
+  backdrop-filter: saturate(180%) blur(5px);
+  background: hsla(0,0%,100%,.8);
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--accents-7);
+}
