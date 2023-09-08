@@ -10,7 +10,7 @@ export const Posts = ({ posts }: {posts: Post[]}) => {
     <ul className={styles.list}>
       {posts.map((post: Post) => (
         <li key={post.id}>
-          <Link href={`/posts/${post.id}`}>{post.title}</Link>
+          <Link className={styles.link} href={`/posts/${post.id}`}>{post.title}</Link>
         </li>
       ))}
     </ul>
