@@ -1,0 +1,33 @@
+.input {
+  margin: 12px;
+  width: 20em;
+  min-height: 1.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+  color: var(--accents-7);
+  border: 1px solid #777777;
+  background: hsla(0,0%,100%,.8);
+}
+
+.input:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.button {
+  min-height: 1.5em;
+  padding: 0.5em;
+  border-radius: 0.25em;
+  outline: none;
+  color: var(--accents-7);
+  border: 1px solid #777777;
+  background: hsla(0,0%,100%,.8);
+}
+
+.button:focus {
+  border-color: hsl(200, 100%, 50%);
+}
+
+.button:hover {
+  border-color: hsl(200, 100%, 50%);
+}
