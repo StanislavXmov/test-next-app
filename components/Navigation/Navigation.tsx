@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSession, signOut } from "next-auth/react";
 
 import styles from './Navigation.module.css';
 
@@ -18,6 +19,7 @@ type NavigationProps = {
 
 export const Navigation = ({ navLinks }: NavigationProps) => {
   const pathname = usePathname();
+  const session = useSession();
 
   return (
     <nav className={styles.navigation}>
@@ -31,6 +33,14 @@ export const Navigation = ({ navLinks }: NavigationProps) => {
           >{link.label}</Link>
         );
       })}
+      {session?.data && <Link href="/profile">Profile</Link>}
+      {session?.data ? (
+        <Link href="#" onClick={() => signOut({ callbackUrl: "/" })}>
+          Sign Out
+        </Link>
+      ) : (
+        <Link href="/signin">SignIn</Link>
+      )}
     </nav>
   );
 };
